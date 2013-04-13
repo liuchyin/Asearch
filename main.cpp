@@ -21,6 +21,10 @@ struct item{
     int x;
     int y;
     item* parent;
+    ~item(){
+        for(int i = 0; i != 3; ++i)
+            delete matrix[i];
+    }
 };
 
 class A{
